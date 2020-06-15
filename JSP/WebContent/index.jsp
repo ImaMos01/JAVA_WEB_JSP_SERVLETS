@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>java con jp y servlets</title>
 </head>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <body>
 	Bienvenido a ecodeup, el blog de Java y Java Web
 	<br>
