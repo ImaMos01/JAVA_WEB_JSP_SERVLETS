@@ -1,6 +1,10 @@
 package com.ecodeup.com;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,8 +30,17 @@ public class Servlet extends HttpServlet {
 	 */
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+			throws ServletException, IOException 
+		List<jbean> estList = new ArrayList<jbean>();
+		jbean est1 = new jbean();
+		est1.setEdad(8); est1.setEstudiante("Juana");est1.setIdentificacion("col12");
+		jbean est2 = new jbean();
+		est2.setEdad(20); est2.setEstudiante("Pepe");est1.setIdentificacion("col15");
+		estList.add(est1);empList.add(est2);
+		request.setAttribute("estList", estList);
+	
 		getServletContext().getRequestDispatcher("/jsp/index.jsp").forward(request, response);
+		
 	}
 
 	/**
